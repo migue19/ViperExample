@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		F278FAEA216C00E800520080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F278FAE9216C00E800520080 /* AppDelegate.swift */; };
-		F278FAEC216C00E800520080 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F278FAEB216C00E800520080 /* ViewController.swift */; };
+		F278FAEC216C00E800520080 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F278FAEB216C00E800520080 /* NoticeViewController.swift */; };
 		F278FAEF216C00E800520080 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F278FAED216C00E800520080 /* Main.storyboard */; };
 		F278FAF1216C00EB00520080 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F278FAF0216C00EB00520080 /* Assets.xcassets */; };
 		F278FAF4216C00EB00520080 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F278FAF2216C00EB00520080 /* LaunchScreen.storyboard */; };
 		F278FAFF216C00EB00520080 /* ViperExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F278FAFE216C00EB00520080 /* ViperExampleTests.swift */; };
 		F278FB0A216C00EB00520080 /* ViperExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F278FB09216C00EB00520080 /* ViperExampleUITests.swift */; };
+		F2B54509216D72B800C90C25 /* NoticeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B54508216D72B800C90C25 /* NoticeRouter.swift */; };
+		F2B5450C216D735000C90C25 /* NoticeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5450B216D735000C90C25 /* NoticeProtocols.swift */; };
+		F2B5450E216D75CF00C90C25 /* NoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5450D216D75CF00C90C25 /* NoticeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		F278FAE6216C00E800520080 /* ViperExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F278FAE9216C00E800520080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F278FAEB216C00E800520080 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F278FAEB216C00E800520080 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		F278FAEE216C00E800520080 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F278FAF0216C00EB00520080 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F278FAF3216C00EB00520080 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		F278FB05216C00EB00520080 /* ViperExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F278FB09216C00EB00520080 /* ViperExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperExampleUITests.swift; sourceTree = "<group>"; };
 		F278FB0B216C00EB00520080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2B54508216D72B800C90C25 /* NoticeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeRouter.swift; sourceTree = "<group>"; };
+		F2B5450B216D735000C90C25 /* NoticeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeProtocols.swift; sourceTree = "<group>"; };
+		F2B5450D216D75CF00C90C25 /* NoticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				F278FAE9216C00E800520080 /* AppDelegate.swift */,
-				F278FAEB216C00E800520080 /* ViewController.swift */,
-				F278FAED216C00E800520080 /* Main.storyboard */,
+				F2FDD494216D68520084E2C7 /* Presenter */,
+				F2FDD493216D68460084E2C7 /* Interactor */,
+				F2FDD496216D6D210084E2C7 /* notice-modules */,
 				F278FAF0216C00EB00520080 /* Assets.xcassets */,
 				F278FAF2216C00EB00520080 /* LaunchScreen.storyboard */,
+				F278FAED216C00E800520080 /* Main.storyboard */,
 				F278FAF5216C00EB00520080 /* Info.plist */,
 			);
 			path = ViperExample;
@@ -123,6 +131,64 @@
 				F278FB0B216C00EB00520080 /* Info.plist */,
 			);
 			path = ViperExampleUITests;
+			sourceTree = "<group>";
+		};
+		F2B5450A216D731400C90C25 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F2B5450B216D735000C90C25 /* NoticeProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F2FDD491216D68180084E2C7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F2B54508216D72B800C90C25 /* NoticeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F2FDD492216D68320084E2C7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F2B5450D216D75CF00C90C25 /* NoticeModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F2FDD493216D68460084E2C7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F2FDD494216D68520084E2C7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F2FDD495216D68640084E2C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F278FAEB216C00E800520080 /* NoticeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2FDD496216D6D210084E2C7 /* notice-modules */ = {
+			isa = PBXGroup;
+			children = (
+				F2FDD492216D68320084E2C7 /* Entity */,
+				F2B5450A216D731400C90C25 /* Protocols */,
+				F2FDD495216D68640084E2C7 /* View */,
+				F2FDD491216D68180084E2C7 /* Router */,
+			);
+			name = "notice-modules";
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +322,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F278FAEC216C00E800520080 /* ViewController.swift in Sources */,
+				F2B5450E216D75CF00C90C25 /* NoticeModel.swift in Sources */,
+				F278FAEC216C00E800520080 /* NoticeViewController.swift in Sources */,
 				F278FAEA216C00E800520080 /* AppDelegate.swift in Sources */,
+				F2B54509216D72B800C90C25 /* NoticeRouter.swift in Sources */,
+				F2B5450C216D735000C90C25 /* NoticeProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
